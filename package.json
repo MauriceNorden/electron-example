@@ -1,0 +1,11 @@
+{
+  "name": "astrus-game-launcher",
+  "version": "1.0.0",
+  "description": "Arcane is a dummy",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "ArcaneCiCi/mnDevs",
+  "license": "MIT"
+}
