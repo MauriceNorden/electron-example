@@ -3,7 +3,6 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 let splash;
 
 app.on("ready", () => {
-    // create main browser window
     mainWindow = new BrowserWindow({
         title: "Electron-Example",
         width: 1150,
@@ -12,8 +11,9 @@ app.on("ready", () => {
         minHeight: 417,
 		
         webPreferences: {
-            nodeIntegration: true,
-        },
+          nodeIntegration: true,
+          contextIsolation: false
+      },
         frame: false,
         show: false,
     });
@@ -34,18 +34,22 @@ app.on("ready", () => {
 
     ipcMain.handle("exit", () => {
       BrowserWindow.getFocusedWindow().destroy();
+      console.log("exit-main");
+
     });
 
     ipcMain.handle("min", () => {
       BrowserWindow.getFocusedWindow().minimize();
+      console.log("minimize-main");
     });
 
     ipcMain.handle("max", () => {
       BrowserWindow.getFocusedWindow().maximize();
+      console.log("max-main");
+
     });
 
 
-    // if main window is ready to show, then destroy the splash window and show up the main window
     mainWindow.once("ready-to-show", () => {
         splash.destroy();
         mainWindow.show();

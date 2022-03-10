@@ -7,5 +7,8 @@
     "test": "electron ."
   },
   "author": "ArcaneCiCi/mnDevs",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^17.1.2"
+  }
 }
