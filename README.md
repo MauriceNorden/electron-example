@@ -9,7 +9,7 @@ A simple electron applications
 
 -Draggable header
 
--Works with the latest version of Electron (v11.2.1)
+-Works with the latest version of Electron (v17.1.1)
 
 # Before install
 Make sure you have installed node.js and git
