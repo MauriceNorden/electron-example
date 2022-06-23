@@ -16,7 +16,8 @@ Make sure you have installed node.js and git
 
 # How to use
 open a (git) terminal and type:
-
+`npm install`
+and
 `npm test`
 
 This will startup the example project.
